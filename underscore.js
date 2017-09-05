@@ -306,7 +306,7 @@ const myEmployees = [
   }
 ]
 
-const myEmployeesAddresses = 0 // use pluck to get addresses here.
+const myEmployeesAddresses = 0// use pluck to get addresses here.
 
 // Now we want to use pluck to get an array of ages of the employees.
 
@@ -411,59 +411,78 @@ function slowFibonnaci(n) {
   return n < 2 ? n: slowFibonnaci(n - 1) + slowFibonnaci(n - 2);
 }
 
-// When ready to test uncoment the 4 lines below.  If you have a fast computer,
+// When ready to test uncoment the 3 lines below.  If you have a fast computer,
 // you may need to increase the number of trials to have it take longer.
 // If you have a slow computer, you may want to turn down the number in case it's
 // taking a really long time.
-let slowN = 40;
-let fastN = 1000;
 
+// console.time('name of stopwatch') starts a stopwatch named whatever you
+// give it as a parameter.
+// You can then call console.timeEnd('name of stopwatch') to stop the stopwatch,
+// and have it tell you the time it took between the two calls.
+
+// You can show how long the slowFibonnaci is taking to calculate the Nth term
+// below.  I recommend starting around 30, if it is running in under a
+// millisecond keep increasing in (I recommend increments of 5 or so) until it's
+// taking a few seconds to complete.
+let slowN = 30;
 // console.time('slowFibonnaci:' + slowN)
 // console.log(slowFibonnaci(slowN));
 // console.timeEnd('slowFibonnaci:' + slowN);
 
-let fastFibonnaci = _.memoize(function(n){
-  return n < 2 ? n: fastFibonnaci(n - 1) + fastFibonnaci(n - 2);
-})
+let fastN = 1000;
+
+let fastFibonnaci = 0; // use memoize to create a fast fibonnaci.  Use the same
+// recursve structure that the slowFibonnaci is using, but have it be memoized
+// so that it'll remeber the previous times it's been called and increase the
 
 // console.time('fastFibonnaci:' + fastN)
 // console.log(fastFibonnaci(fastN));
 // console.timeEnd('fastFibonnaci:' + fastN)
 
+// We can also use memoize on axios calls so that we only need to make the
+// request to the server once.
+
+// Here we have a regular axios call to a server.
+
 let getDeathstar = function(n){
   return axios.get('https://swapi.co/api/starships/'+n)
 }
-// console.time('getDeathstar')
-// getDeathstar(9).then(e=>console.log(e.data));
-// console.timeEnd('getDeathstar')
 
-let getJedi = _.memoize(function(n){
-  return axios.get(`https://swapi.co/api/people/${n}`)
-});
+// Below we can measure the time it takes to get a return from the api call.
+
+// console.time('getDeathstar')
+// getDeathstar(9).then(e=>{
+//   console.log(e.data)
+//   console.timeEnd('getDeathstar')
+// });
+
+// getPersonApi `https://swapi.co/api/people/${n}`
+
+let getJedi = // Use Memoize to remeber the previous calls made to the server
+// then compare the times for the first and second calls of both the getJedi and
+// getDeathstar functions
+// There are no unit tests for this section. But play around with the
+// console.time, and console.timeEnd functions so you can use them to measure
+// the time it takes for various parts of your code to run.  This can be
+// helpful in finding slow parts of your code that you want to improve.
 
 // console.time('getJedi')
-// getJedi(1).then(e=>console.log(e.data));
-// console.timeEnd('getJedi')
-
-// setTimeout(()=>{
-//   console.time('getDeathstar')
-//   getDeathstar(9).then(e=>console.log(e.data));
-//   console.timeEnd('getDeathstar')
-//   console.time('getJedi')
-//   getJedi(1).then(e=>console.log(e.data));
+// getJedi(1).then(e=>{
+//   console.log(e.data)
 //   console.timeEnd('getJedi')
-// }, 2000)
+// });
 
-// shuffle
+setTimeout(()=>{
+  // console.time('getDeathstar')
+  // getDeathstar(9).then(e=>{
+  //   console.log(e.data)
+  //   console.timeEnd('getDeathstar')
+  // });
 
-
-// invert
-
-
-// escape
-
-
-// unescape
-
-
-//
+  // console.time('getJedi')
+  // getJedi(1).then(e=>{
+  //   console.log(e.data)
+  //   console.timeEnd('getJedi')
+  // });
+}, 2000)
