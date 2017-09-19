@@ -17,7 +17,7 @@
 
 
 // pluck
-//  Pluck lets us take an array of objects.  And create an array that consists of
+//  Pluck lets us take an array of objects and create an array that consists of
 //  that property from each object.
 
 // const myObjectArray [{name:'bob',age:13,height:'6ft'},{name:'bobs',age:17,height:'6ft'},
@@ -346,7 +346,7 @@ const listToSendEmailsTo = 0; // Put underscore here to make list of the union o
 // let C = _.intersection(A, B);
 //  C = [3,4];
 
-// Bob and Bree have decided that instead of initing everyone they know to their
+// Bob and Bree have decided that instead of inviting everyone they know to their
 // party.  They are instead only going to invite those people that they both know.
 
 const listOfSharedEmails = 0; // Use underscore to create the list that are in both lists
