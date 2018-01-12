@@ -398,11 +398,11 @@ const purchasesByMonth = 0; // Use groupBy to group the purchases by the month t
 const totalByMonth = 0; // Use the groupded purchasesByMonth and reduce to create a totalByMonth object.
 
 // memoize
-//  Memoize lets us take a function that takes a lot of time to run.  And memeorize
+//  Memoize lets us take a function that takes a lot of time to run, and memoize
 //  results for that function, so if we run the function with the same parameters again,
-//  it will used the momorized results instead of making the calculation again.
+//  it will use the memoized results instead of making the calculation again.
 
-// Here we have a fuction that calculates the nth term of a fibbonaci sequence
+// Here we have a function that calculates the nth term of a fibbonaci sequence
 // 1 1 2 3 5 8 13 21 34 ...
 // where each number is the sum of the two numbers before it.
 // We are using a recusive function (a function that calls itself)
@@ -411,7 +411,7 @@ function slowFibonnaci(n) {
   return n < 2 ? n: slowFibonnaci(n - 1) + slowFibonnaci(n - 2);
 }
 
-// When ready to test uncoment the 3 lines below.  If you have a fast computer,
+// When ready to test uncomment the 3 lines below.  If you have a fast computer,
 // you may need to increase the number of trials to have it take longer.
 // If you have a slow computer, you may want to turn down the number in case it's
 // taking a really long time.
