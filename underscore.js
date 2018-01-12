@@ -353,9 +353,9 @@ const listOfSharedEmails = 0; // Use underscore to create the list that are in b
 
 // groupBy
 //  Group By lets us take an array of objects, and group then into groups based
-//  on a proprty.
+//  on a property.
 
-// Example  If we have an array of purchases Each of which was purchased by eaither Barry or Bob
+// Example  If we have an array of purchases Each of which was purchased by either Barry or Bob
 //
 // const purchaseAry = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 // {"owner":"Bob","price":73},{"owner":"Barry","price":57},{"owner":"Barry","price":128},
@@ -365,7 +365,7 @@ const listOfSharedEmails = 0; // Use underscore to create the list that are in b
 // {"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
 // {"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}]
 
-// const purcahseByOwner = _.groupBy(purchaseAry, 'owner');
+// const purchaseByOwner = _.groupBy(purchaseAry, 'owner');
 // {Barry: [{owner: "Barry",price: 103}, {owner: "Barry",price: 57},
 //          {owner: "Barry",price: 128}, {owner: "Barry",price: 133}, {owner: "Barry",price: 27},
 //          {owner: "Barry",price: 138}, {owner: "Barry",price: 9}, {owner: "Barry",price: 30},
@@ -377,7 +377,7 @@ const listOfSharedEmails = 0; // Use underscore to create the list that are in b
 // }
 
 // Notice how purchaseByOwner is an Object with properties of Barry and Bob
-// (the two owners from our litst) and each property is an array of that person's
+// (the two owners from our list) and each property is an array of that person's
 // purchases.
 
 
