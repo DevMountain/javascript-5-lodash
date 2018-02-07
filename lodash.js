@@ -1,31 +1,30 @@
 
 /*
-  Underscore is a library that can help us clean up our code.  It has many helpful
-  function in it.  Many of which were so helpful, they have found their way
-  into the core of JavaScript (map, filter, forEach, reduce, find) There are others
-  that are under review for being incorperated into the core JavaScript language.
+  Lodash is a library that can help us clean up our code.  It has many helpful
+  functions in it.  Many of which were so helpful, they have found their way
+  into the core of JavaScript.
 
-  In the meantime, we can use all that handy functionality by bringing in the
-  underscore library.  The documents can be found here, and can be brought into
+  We can use all that handy functionality by bringing in the
+  lodash library.  The documents can be found here, and can be brought into
   a project either with npm or a cdn.
-  http://underscorejs.org/
+  http://lodash.com/
 
-  This project is brining in the file through a cdn.  It will be available for
-  you to use on the _ variable.  They chose _ because it's a short east to reference
+  This project is bringing in the file through a cdn.  It will be available for
+  you to use on the _ variable.  They chose _ because it's a short, easy to reference
   variable.
 */
 
 
-// pluck
-//  Pluck lets us take an array of objects and create an array that consists of
-//  that property from each object.
+// map, with a .property
+//  Map lets us take an array of objects, and a string referencing a common property, 
+//  and create an array that consists of that property from each object.
 
 // const myObjectArray [{name:'bob',age:13,height:'6ft'},{name:'bobs',age:17,height:'6ft'},
 //    {name:'bobett',age:14,height:'6ft'},{name:'bobbin',age:18,height:'6ft'},
 //    {name:'bobbers',age:15,height:'6ft'},{name:'bob the 2nd',age:19,height:'6ft'},
 //    {name:'bobby',age:16,height:'6ft'},{name:'bob the 3rd',age:3,height:'6ft'}]
 
-// const pluckedArray = _.pluck(myObjectArray, 'name');
+// const pluckedArray = _.map(myObjectArray, 'name');
 // pluckedArray will contain.
 //  ['bob','bobs','bobett','bobbin','bobbers','bob the 2nd','bobby','bob the 3rd']
 
@@ -335,11 +334,11 @@ const breeFriendsEmails = ["red.power@ranger.com", "pikachu@gmail.com", "james@g
                             "batman@gothan.gov", "betty.white@gmail.com", "mr.giggles@gmail.com",
                             "mrs.giggles@gmail.com", "stacey@gmail.com", "brent@gmail.com", "dave@gmail.com"];
 
-const listToSendEmailsTo = 0; // Put underscore here to make list of the union of the two address.
+const listToSendEmailsTo = 0; // Put lodash here to make list of the union of the two address.
 
 
 // intersection
-//  Intersetction lets us take two arrays, and create a new array that only
+//  Intersection lets us take two arrays, and create a new array that only
 //  contains shared elements.
 // let A = [6,3,8,4];
 // let B = [1,2,3,4];
@@ -349,7 +348,7 @@ const listToSendEmailsTo = 0; // Put underscore here to make list of the union o
 // Bob and Bree have decided that instead of inviting everyone they know to their
 // party.  They are instead only going to invite those people that they both know.
 
-const listOfSharedEmails = 0; // Use underscore to create the list that are in both lists
+const listOfSharedEmails = 0; // Use lodash to create the list that are in both lists
 
 // groupBy
 //  Group By lets us take an array of objects, and group then into groups based
@@ -395,7 +394,7 @@ const purchases = [{"month":"February","price":37.85},{"month":"January","price"
 const purchasesByMonth = 0; // Use groupBy to group the purchases by the month that they were made.
 
 // Bonus Points
-const totalByMonth = 0; // Use the groupded purchasesByMonth and reduce to create a totalByMonth object.
+const totalByMonth = 0; // Use the grouped purchasesByMonth and reduce to create a totalByMonth object.
 
 // memoize
 //  Memoize lets us take a function that takes a lot of time to run, and memoize
