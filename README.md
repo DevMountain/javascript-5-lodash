@@ -1,6 +1,6 @@
 # Instructions
 
-Edit the underscore.js file to do your work.
+Edit the lodash.js file to do your work.
 
 Use live-server to see the unit tests as they run.
 
