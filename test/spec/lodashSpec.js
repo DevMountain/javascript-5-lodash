@@ -1,98 +1,98 @@
-describe('pluck', ()=>{
-  describe('myEmployeesAddresses', ()=>{
-    it('should exist', ()=>{
+describe("map", () => {
+  describe("myEmployeesAddresses", () => {
+    it("should exist", () => {
       expect(myEmployeesAddresses).toBeDefined();
-    })
-    it('should be an array', ()=>{
+    });
+    it("should be an array", () => {
       expect(myEmployeesAddresses.length).toBeDefined();
-    })
-    it(`should have ${myEmployees.length} elements`, ()=>{
+    });
+    it(`should have ${myEmployees.length} elements`, () => {
       expect(myEmployeesAddresses.length).toBe(myEmployees.length);
-    })
-    it('should have the correct elements', ()=>{
-      expect(myEmployeesAddresses).toEqual(myEmployees.map(e=>e.address));
-    })
-  })
+    });
+    it("should have the correct elements", () => {
+      expect(myEmployeesAddresses).toEqual(myEmployees.map(e => e.address));
+    });
+  });
 
-  describe('myEmployeesAges', ()=>{
-    it('should exist', ()=>{
+  describe("myEmployeesAges", () => {
+    it("should exist", () => {
       expect(myEmployeesAges).toBeDefined();
-    })
-    it('should be an array', ()=>{
+    });
+    it("should be an array", () => {
       expect(myEmployeesAges.length).toBeDefined();
-    })
-    it(`should have ${myEmployees.length} elements`, ()=>{
+    });
+    it(`should have ${myEmployees.length} elements`, () => {
       expect(myEmployeesAges.length).toBe(myEmployees.length);
-    })
-    it('should have the correct elements', ()=>{
-      expect(myEmployeesAges).toEqual(myEmployees.map(e=>e.age));
-    })
-  })
-})
+    });
+    it("should have the correct elements", () => {
+      expect(myEmployeesAges).toEqual(myEmployees.map(e => e.age));
+    });
+  });
+});
 
-describe('sets', ()=>{
-  describe('listToSendEmailsTo', ()=>{
+describe("sets", () => {
+  describe("listToSendEmailsTo", () => {
     let myArry = _.union(bobFriendsEmails, breeFriendsEmails);
-    it('should exist', ()=>{
+    it("should exist", () => {
       expect(listToSendEmailsTo).toBeDefined();
-    })
-    it('should be an array', ()=>{
+    });
+    it("should be an array", () => {
       expect(listToSendEmailsTo.length).toBeDefined();
-    })
-    it(`should have ${myArry.length} elements`, ()=>{
+    });
+    it(`should have ${myArry.length} elements`, () => {
       expect(listToSendEmailsTo.length).toBe(myArry.length);
-    })
-    it('should have the correct elements', ()=>{
+    });
+    it("should have the correct elements", () => {
       expect(listToSendEmailsTo.sort()).toEqual(myArry.sort());
-    })
-  })
+    });
+  });
 
-  describe('listOfSharedEmails', ()=>{
+  describe("listOfSharedEmails", () => {
     let myArry = _.intersection(bobFriendsEmails, breeFriendsEmails);
-    it('should exist', ()=>{
+    it("should exist", () => {
       expect(listOfSharedEmails).toBeDefined();
-    })
-    it('should be an array', ()=>{
+    });
+    it("should be an array", () => {
       expect(listOfSharedEmails.length).toBeDefined();
-    })
-    it(`should have ${myArry.length} elements`, ()=>{
+    });
+    it(`should have ${myArry.length} elements`, () => {
       expect(listOfSharedEmails.length).toBe(myArry.length);
-    })
-    it('should have the correct elements', ()=>{
+    });
+    it("should have the correct elements", () => {
       expect(listOfSharedEmails.sort()).toEqual(myArry.sort());
-    })
-  })
-})
+    });
+  });
+});
 
-describe('groups', ()=>{
-  describe('purchasesByMonth', ()=>{
-    let myGroup = _.groupBy(purchases, 'month');
-    it('should exist', ()=>{
+describe("groups", () => {
+  describe("purchasesByMonth", () => {
+    let myGroup = _.groupBy(purchases, "month");
+    it("should exist", () => {
       expect(purchasesByMonth).toBeDefined();
-    })
-    it('should be an object', ()=>{
+    });
+    it("should be an object", () => {
       expect(_.isObject(purchasesByMonth)).toBe(true);
-    })
-    it(`should have January, February, March, and April properties on object`, ()=>{
+    });
+    it(`should have January, February, March, and April properties on object`, () => {
       expect(purchasesByMonth.January).toBeDefined();
       expect(purchasesByMonth.February).toBeDefined();
       expect(purchasesByMonth.March).toBeDefined();
       expect(purchasesByMonth.April).toBeDefined();
-    })
-    it(`January, February, March, and April should be arrays`, ()=>{
+    });
+    it(`January, February, March, and April should be arrays`, () => {
       expect(_.isArray(purchasesByMonth.January)).toBe(true);
       expect(_.isArray(purchasesByMonth.February)).toBe(true);
       expect(_.isArray(purchasesByMonth.March)).toBe(true);
       expect(_.isArray(purchasesByMonth.April)).toBe(true);
-    })
-    it('should have the correct elements in each array', ()=>{
+    });
+    it("should have the correct elements in each array", () => {
       expect(purchasesByMonth.January.sort()).toEqual(myGroup.January.sort());
       expect(purchasesByMonth.February.sort()).toEqual(myGroup.February.sort());
       expect(purchasesByMonth.April.sort()).toEqual(myGroup.April.sort());
       expect(purchasesByMonth.March.sort()).toEqual(myGroup.March.sort());
-    })
-  })
-})
+    });
+  });
+});
 
 // describe('filters1', ()=>{
 //   describe('evenNumbers', ()=>{
