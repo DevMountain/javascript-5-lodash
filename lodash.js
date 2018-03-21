@@ -2,11 +2,9 @@
   Lodash is a library that can help us clean up our code.  It has many helpful
   functions in it.  Many of which were so helpful, they have found their way
   into the core of JavaScript.
-
   We can use all that handy functionality by bringing in the
   lodash library.  The documentation can be found here -> http://lodash.com/, and can be brought into
   a project either with npm or a cdn.
-
   This project is bringing in the file through a cdn.  It will be available for
   you to use on the _ variable.  They chose _ because it's a short, easy to reference
   variable.
